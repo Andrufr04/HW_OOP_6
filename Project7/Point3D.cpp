@@ -65,8 +65,8 @@ Point3D& Point3D::Min(int x, int y, int z)
 }
 Point3D& Point3D::Div(int x, int y, int z)
 {
-	this->x /= x;
-	this->z /= z;
-	this->y /= y;
+	if(x != 0) this->x /= x;
+	if (x != 0) this->z /= z;
+	if (x != 0) this->y /= y;
 	return *this;
 }
